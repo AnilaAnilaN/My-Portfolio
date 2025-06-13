@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anila Nawaz | MERN Stack Developer</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="anila.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                Anila<span class="text-primary">.</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Intro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h6 class="text-primary mb-3">HELLO, I'M</h6>
+                    <h1 class="display-3 fw-bold mb-4">Anila Nawaz</h1>
+                    <h2 class="text-muted mb-4">MERN Stack Developer</h2>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="#projects" class="btn btn-primary btn-lg px-4 py-3">View Projects</a>
+                        <a href="#contact" class="btn btn-outline-primary btn-lg px-4 py-3">Contact Me</a>
+                        <a href="resume.pdf" download class="btn btn-resume btn-lg px-4 py-3">
+                            <i class="fas fa-download me-2"></i>Download Resume
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center position-relative">
+                    <div class="app-icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <div class="app-icon">
+                        <i class="fab fa-node-js"></i>
+                    </div>
+                    <div class="app-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="code-animation mt-5">
+                        <div class="typing-container">
+                            <div class="code-line"><span class="code-keyword">const</span> <span class="code-var">developer</span> = {</div>
+                            <div class="code-line"><span class="code-property">  name</span>: <span class="code-string">'Anila Nawaz'</span>,</div>
+                            <div class="code-line"><span class="code-property">  role</span>: <span class="code-string">'MERN Stack Developer'</span>,</div>
+                            <div class="code-line"><span class="code-property">  skills</span>: [<span class="code-string">'React'</span>, <span class="code-string">'Node.js'</span>, <span class="code-string">'MongoDB'</span>],</div>
+                            <div class="code-line"><span class="code-property">  passion</span>: <span class="code-string">'Creating beautiful web experiences'</span></div>
+                            <div class="code-line">};</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <section id="skills" class="py-6">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8 text-center section-header">
+        <h2 class="display-5 fw-bold mb-3">Technical Expertise</h2>
+        <p class="text-muted">Specializing in MERN stack development with a focus on full-stack applications</p>
+        <div class="section-divider"></div>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="mern-card h-100">
+          <div class="card-body text-center p-4">
+            <div class="contact-icon">
+              <i class="fab fa-react fa-2x"></i>
+            </div>
+            <h4 class="card-title fw-bold">Frontend</h4>
+            <p class="card-text text-muted">Crafting responsive and interactive UIs with modern frontend technologies.</p>
+            <ul class="list-unstyled text-start">
+              <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>React.js & Redux</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>HTML5 & CSS3</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Tailwind & Bootstrap</li>
+              <li><i class="fas fa-check-circle text-primary me-2"></i>Responsive Design</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="mern-card h-100">
+          <div class="card-body text-center p-4">
+            <div class="contact-icon">
+              <i class="fab fa-node-js fa-2x"></i>
+            </div>
+            <h4 class="card-title fw-bold">Backend</h4>
+            <p class="card-text text-muted">Building scalable APIs and server-side logic with Node.js.</p>
+            <ul class="list-unstyled text-start">
+              <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Node.js & Express</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>REST & GraphQL APIs</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>JWT & OAuth</li>
+              <li><i class="fas fa-check-circle text-primary me-2"></i>Microservices</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="mern-card h-100">
+          <div class="card-body text-center p-4">
+            <div class="contact-icon">
+              <i class="fas fa-database fa-2x"></i>
+            </div>
+            <h4 class="card-title fw-bold">Database</h4>
+            <p class="card-text text-muted">Efficient data management with NoSQL and SQL databases.</p>
+            <ul class="list-unstyled text-start">
+              <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>MongoDB & Mongoose</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>PostgreSQL</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Data Modeling</li>
+              <li><i class="fas fa-check-circle text-primary me-2"></i>Redis</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="mern-card h-100">
+          <div class="card-body text-center p-4">
+            <div class="contact-icon">
+              <i class="fas fa-tools fa-2x"></i>
+            </div>
+            <h4 class="card-title fw-bold">Tools & DevOps</h4>
+            <p class="card-text text-muted">Leveraging modern tools for development and deployment.</p>
+            <ul class="list-unstyled text-start">
+              <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Git & GitHub</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Docker & CI/CD</li>
+              <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Postman & WebSockets</li>
+              <li><i class="fas fa-check-circle text-primary me-2"></i>AWS Basics</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-6">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center section-header">
+                    <h2 class="display-5 fw-bold mb-3">Featured Projects</h2>
+                    <p class="text-muted">Showcasing my MERN stack development expertise through real applications</p>
+                    <div class="section-divider"></div>
+                </div>
+            </div>
+            <div class="row g-5">
+                <!-- Student Task Planner -->
+                <div class="col-md-6">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="project-icon">
+                                    <i class="fas fa-tasks"></i>
+                                </div>
+                                <h3>Student Task Planner</h3>
+                                <p>Task Management Application</p>
+                                <div class="mt-4">
+                                    <p class="mb-1">Hover to see details</p>
+                                    <i class="fas fa-sync-alt fs-3 text-primary"></i>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="back-content">
+                                    <h3>Student Task Planner</h3>
+                                    <p class="project-description">A comprehensive task management app for students to organize assignments, deadlines, and study schedules with an intuitive interface.</p>
+                                    <div class="project-links">
+                                        <a href="https://github.com/AnilaAnilaN/taskPlanner" target="_blank" class="github-link">
+                                            <i class="fab fa-github"></i> View Code
+                                        </a>
+                                        <a href="https://www.figma.com/design/RO9W21Zos8B4Zr5FjTlcXt/ui" target="_blank" class="figma-link">
+                                            <i class="fab fa-figma"></i> View Design
+                                        </a>
+                                    </div>
+                                    <div class="project-tech">
+                                        <span>React</span>
+                                        <span>Node.js</span>
+                                        <span>MongoDB</span>
+                                        <span>Express</span>
+                                        <span>Material UI</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Expense Tracker -->
+                <div class="col-md-6">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="project-icon" style="background: linear-gradient(135deg, var(--mern-blue), var(--mern-dark-blue));">
+                                    <i class="fas fa-wallet"></i>
+                                </div>
+                                <h3>Expense Tracker</h3>
+                                <p>Financial Management Tool</p>
+                                <div class="mt-4">
+                                    <p class="mb-1">Hover to see details</p>
+                                    <i class="fas fa-sync-alt fs-3 text-primary"></i>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="back-content">
+                                    <h3>Expense Tracker</h3>
+                                    <p class="project-description">Interactive financial management tool with expense categorization, visual analytics, and local storage persistence.</p>
+                                    <div class="project-links">
+                                        <a href="https://github.com/AnilaAnilaN/Expense-tracker" target="_blank" class="github-link">
+                                            <i class="fab fa-github"></i> View Code
+                                        </a>
+                                        <a href="https://anilaanilan.github.io/Expense-tracker/" target="_blank" class="figma-link">
+                                            <i class="fas fa-external-link-alt"></i> Live Demo
+                                        </a>
+                                    </div>
+                                    <div class="project-tech">
+                                        <span>React</span>
+                                        <span>Local Storage</span>
+                                        <span>Chart.js</span>
+                                        <span>Bootstrap</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fruit Memory Match Game -->
+                <div class="col-md-6">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="project-icon" style="background: linear-gradient(135deg, var(--mern-green), var(--mern-blue));">
+                                    <i class="fas fa-gamepad"></i>
+                                </div>
+                                <h3>Fruit Memory Match Game</h3>
+                                <p>Browser-Based Game</p>
+                                <div class="mt-4">
+                                    <p class="mb-1">Hover to see details</p>
+                                    <i class="fas fa-sync-alt fs-3 text-primary"></i>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="back-content">
+                                    <h3>Fruit Memory Match Game</h3>
+                                    <p class="project-description">Browser-based game with responsive design, scoring system, and timer functionality.</p>
+                                    <div class="project-links">
+                                        <a href="https://github.com/AnilaAnilaN/Game" target="_blank" class="github-link">
+                                            <i class="fab fa-github"></i> View Code
+                                        </a>
+                                        <a href="https://anilaanilan.github.io/Game/" target="_blank" class="figma-link">
+                                            <i class="fas fa-external-link-alt"></i> Live Demo
+                                        </a>
+                                    </div>
+                                    <div class="project-tech">
+                                        <span>JavaScript</span>
+                                        <span>HTML/CSS</span>
+                                        <span>Game Development</span>
+                                        <span>Responsive Design</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Real-time Chat Application (Ongoing) -->
+                <div class="col-md-6">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="project-icon" style="background: linear-gradient(135deg, var(--mern-node), var(--mern-blue));">
+                                    <i class="fas fa-comments"></i>
+                                </div>
+                                <h3>Real-time Chat App</h3>
+                                <p>Ongoing Development</p>
+                                <div class="mt-4">
+                                    <p class="mb-1">Hover to see details</p>
+                                    <i class="fas fa-sync-alt fs-3 text-primary"></i>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="back-content">
+                                    <h3>Real-time Chat Application</h3>
+                                    <p class="project-description">Developing a MERN-based chat application with Socket.IO for instant messaging and group chat functionality.</p>
+                                    <div class="project-tech">
+                                        <span>MERN Stack</span>
+                                        <span>Socket.IO</span>
+                                        <span>Real-time</span>
+                                        <span>WebSockets</span>
+                                    </div>
+                                    <div class="mt-4">
+                                        <span class="badge bg-warning text-dark">In Development</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-6">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center section-header">
+                    <h2 class="display-5 fw-bold mb-3">My Education</h2>
+                    <p class="text-muted">Academic background and achievements</p>
+                    <div class="section-divider"></div>
+                </div>
+            </div>
+            <div class="row g-5">
+                <!-- Virtual University -->
+                <div class="col-md-6">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="project-icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <h3>Virtual University</h3>
+                                <p>BSCS, Computer Science</p>
+                                <div class="mt-4">
+                                    <p class="mb-1">Hover to see details</p>
+                                    <i class="fas fa-sync-alt fs-3 text-primary"></i>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="back-content">
+                                    <h3>Virtual University</h3>
+                                    <p class="project-description">Bachelor's degree in Computer Science with focus on software development and web technologies.</p>
+                                    <div class="project-details">
+                                        <p><strong>2021–2025</strong></p>
+                                        <p><strong>CGPA:</strong> 3.79/4.00</p>
+                                        <ul class="education-list">
+                                            <li>Grade: A+ in core CS courses</li>
+                                            <li>4 years (8 semesters) study program</li>
+                                            <li>Dean's List for academic excellence</li>
+                                            <li>Completed advanced web development courses</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Govt. Degree College -->
+                <div class="col-md-6">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="project-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <h3>Govt. Degree College</h3>
+                                <p>Intermediate, Biology</p>
+                                <div class="mt-4">
+                                    <p class="mb-1">Hover to see details</p>
+                                    <i class="fas fa-sync-alt fs-3 text-primary"></i>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="back-content">
+                                    <h3>Govt. Degree College</h3>
+                                    <p class="project-description">Pre-medical studies with focus on biology, chemistry, and physics.</p>
+                                    <div class="project-details">
+                                        <p><strong>2018–2020</strong></p>
+                                        <p><strong>Marks:</strong> 915/1100</p>
+                                        <ul class="education-list">
+                                            <li>Developed technical communication skills</li>
+                                            <li>Scientific problem-solving approach</li>
+                                            <li>Analytical thinking and research abilities</li>
+                                            <li>Team collaboration in science projects</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-6">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8 text-center section-header">
+        <h2 class="display-5 fw-bold mb-3">Get In Touch</h2>
+        <p class="text-muted">Open to collaboration, freelance projects, or new opportunities</p>
+        <div class="section-divider"></div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3 text-center">
+            <div class="contact-item p-4 rounded h-100">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <h5 class="fw-bold">Email</h5>
+              <p>anilanawaz531@gmail.com</p>
+              <a href="mailto:anilanawaz531@gmail.com" class="btn btn-sm btn-primary w-100 mt-2">
+                <i class="fas fa-envelope me-1"></i> Email Me
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 text-center">
+            <div class="contact-item p-4 rounded h-100">
+              <div class="contact-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <h5 class="fw-bold">GitHub</h5>
+              <p>github.com/AnilaAnilaN</p>
+              <a href="https://github.com/AnilaAnilaN" class="btn btn-sm btn-primary w-100 mt-2" target="_blank">
+                <i class="fab fa-github me-1"></i> View Profile
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 text-center">
+            <div class="contact-item p-4 rounded h-100">
+              <div class="contact-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+              <h5 class="fw-bold">LinkedIn</h5>
+              <p>linkedin.com/in/anila-nawaz-dev</p>
+              <a href="https://linkedin.com/in/anila-nawaz-dev" class="btn btn-sm btn-primary w-100 mt-2" target="_blank">
+                <i class="fab fa-linkedin-in me-1"></i> Connect
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 text-center">
+            <div class="contact-item p-4 rounded h-100">
+              <div class="contact-icon">
+                <i class="fas fa-file-pdf"></i>
+              </div>
+              <h5 class="fw-bold">Resume</h5>
+              <p>Download my professional resume</p>
+              <a href="resume.pdf" download class="btn btn-sm btn-primary w-100 mt-2">
+                <i class="fas fa-download me-1"></i> Download
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <a class="navbar-brand fw-bold fs-3" href="#">
+                        Anila<span class="text-primary">.</span>
+                    </a>
+                    <p class="mb-0 mt-2">MERN Stack Developer specializing in full-stack web applications</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="d-flex justify-content-md-end gap-3">
+                        <a href="https://github.com/AnilaAnilaN" class="social-link" target="_blank">
+                            <i class="fab fa-github fa-lg"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/anila-nawaz-dev" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin-in fa-lg"></i>
+                        </a>
+                        <a href="mailto:anilanawaz531@gmail.com" class="social-link" target="_blank">
+                            <i class="fas fa-envelope fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">© 2025 Anila Nawaz. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Built with <i class="fas fa-heart text-danger"></i></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="anila.js"></script>
+</body>
+</html>
