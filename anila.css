@@ -1,11 +1,11 @@
 /* General Styles */
 :root {
-  --mern-green: #47A248;
-  --mern-blue: #61DAFB;
-  --mern-node: #68A063;
-  --mern-dark-blue: #00D8FF;
-  --bs-primary: #47A248;
-  --bs-primary-rgb: 71, 162, 72;
+  --mern-green: #47A248; /* MongoDB green */
+  --mern-blue: #61DAFB; /* React blue */
+  --mern-node: #68A063; /* Node.js green */
+  --mern-dark-blue: #00D8FF; /* React dark blue */
+  --bs-primary: #68A063; /* Updated to Node.js green */
+  --bs-primary-rgb: 104, 160, 99;
   --mern-gray-light: #F7F9FB;
   --mern-gray-dark: #1C2526;
   --mern-card-light: #FFFFFF;
@@ -78,8 +78,14 @@ h1, h2, h3, h4, h5, .display-1, .display-2, .display-3, .display-4, .display-5, 
 /* Hero Section */
 .hero {
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--mern-gray-light), #e6f0fa);
-  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+  background: linear-gradient(135deg, rgba(71, 162, 72, 0.05) 0%, rgba(71, 162, 72, 0.02) 100%);
+}
+
+.dark-mode .hero {
+  background: linear-gradient(135deg, rgba(71, 162, 72, 0.1) 0%, rgba(71, 162, 72, 0.05) 100%);
 }
 
 .hero h1 {
@@ -91,52 +97,141 @@ h1, h2, h3, h4, h5, .display-1, .display-2, .display-3, .display-4, .display-5, 
   font-size: 2rem;
 }
 
-.hero-text {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
+/* Resume Button */
+.btn-resume {
+  --bs-btn-color: var(--mern-text-dark);
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: #5a8a5a;
+  --bs-btn-hover-border-color: #5a8a5a;
+  --bs-btn-active-bg: #4c774c;
+  --bs-btn-active-border-color: #4c774c;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
 }
 
-.app-icon {
-  position: absolute;
-  font-size: 3rem;
-  color: var(--mern-blue);
-  opacity: 0.2;
-  animation: float 6s ease-in-out infinite;
+.btn-resume:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.app-icon:nth-child(1) { top: 10%; left: 20%; }
-.app-icon:nth-child(2) { top: 50%; right: 20%; animation-delay: 2s; }
-.app-icon:nth-child(3) { bottom: 10%; left: 30%; animation-delay: 4s; }
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+.hero .d-flex.gap-3 {
+  gap: 1rem !important;
+  flex-wrap: wrap;
 }
 
-/* Hero Section Code Animation */
+/* Code Animation */
 .code-animation {
-  background: var(--mern-gray-dark);
-  padding: 20px;
+  font-family: monospace;
+  font-size: 1.2rem;
+  color: var(--mern-green);
+  background-color: rgba(0, 0, 0, 0.05);
   border-radius: 10px;
-  color: var(--mern-text-dark);
-  font-family: 'Courier New', monospace;
-  max-width: 500px;
-  margin: 0 auto;
+  padding: 30px;
+  border-left: 4px solid var(--mern-blue);
+  max-width: 600px;
+  margin: 2rem auto;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .code-animation {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.typing-container {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid var(--mern-blue);
+  animation: typing 4s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--mern-blue); }
 }
 
 .code-line {
+  margin-bottom: 10px;
   opacity: 0;
   transform: translateX(-20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  margin-bottom: 5px;
+  animation: fadeIn 0.5s forwards;
 }
 
-.code-keyword { color: #ff79c6; }
-.code-var { color: #50fa7b; }
-.code-property { color: #8be9fd; }
-.code-string { color: #f1fa8c; }
+.code-line:nth-child(1) { animation-delay: 0.5s; }
+.code-line:nth-child(2) { animation-delay: 1s; }
+.code-line:nth-child(3) { animation-delay: 1.5s; }
+.code-line:nth-child(4) { animation-delay: 2s; }
+.code-line:nth-child(5) { animation-delay: 2.5s; }
+.code-line:nth-child(6) { animation-delay: 3s; }
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.code-keyword { color: #d73a49; }
+.code-var { color: #6f42c1; }
+.code-property { color: #005cc5; }
+.code-string { color: #032f62; }
+.dark-mode .code-keyword { color: #ff7b72; }
+.dark-mode .code-var { color: #d2a8ff; }
+.dark-mode .code-property { color: #79c0ff; }
+.dark-mode .code-string { color: #a5d6ff; }
+
+/* Floating App Icons */
+.app-icon {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 28px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  animation: float 6s ease-in-out infinite;
+}
+
+.app-icon:nth-child(1) {
+  background: linear-gradient(135deg, var(--mern-blue), var(--mern-dark-blue));
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.app-icon:nth-child(2) {
+  background: linear-gradient(135deg, var(--mern-dark-blue), var(--mern-node));
+  top: 20%;
+  right: 15%;
+  animation-delay: 0.5s;
+}
+
+.app-icon:nth-child(3) {
+  background: linear-gradient(135deg, var(--mern-node), var(--mern-blue));
+  bottom: 15%;
+  left: 15%;
+  animation-delay: 1s;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
 
 /* Section Styling */
 .py-6 {
@@ -156,7 +251,7 @@ h1, h2, h3, h4, h5, .display-1, .display-2, .display-3, .display-4, .display-5, 
   font-size: 2.5rem;
 }
 
-/* Flip Card Styles */
+/* Improved Flip Card Styles */
 .flip-card {
   perspective: 1000px;
   height: 350px;
@@ -263,7 +358,7 @@ h1, h2, h3, h4, h5, .display-1, .display-2, .display-3, .display-4, .display-5, 
   margin-bottom: 1rem;
 }
 
-/* Project Specific Styles */
+/* Project Links */
 .project-links {
   display: flex;
   gap: 15px;
@@ -330,6 +425,8 @@ h1, h2, h3, h4, h5, .display-1, .display-2, .display-3, .display-4, .display-5, 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-item:hover {
@@ -365,24 +462,38 @@ h1, h2, h3, h4, h5, .display-1, .display-2, .display-3, .display-4, .display-5, 
   margin-bottom: 10px;
 }
 
-.contact-item p {
+.contact-detail {
   font-size: 0.9rem;
   color: var(--mern-text-light);
   margin-bottom: 15px;
+  word-break: break-word;
+  flex-grow: 1;
 }
 
 .contact-item .btn {
   font-size: 0.85rem;
   padding: 8px 20px;
+  margin-top: auto;
 }
 
-.contact-link {
-  color: var(--mern-text-light);
-  text-decoration: none;
+/* Updated Button Styles */
+.btn-primary {
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: #5a8a5a;
+  --bs-btn-hover-border-color: #5a8a5a;
+  --bs-btn-active-bg: #4c774c;
+  --bs-btn-active-border-color: #4c774c;
+  font-weight: 600;
 }
 
-.contact-link:hover {
-  color: var(--mern-blue);
+.btn-outline-primary {
+  --bs-btn-color: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: var(--bs-primary);
+  --bs-btn-hover-border-color: var(--bs-primary);
+  --bs-btn-active-bg: var(--bs-primary);
+  --bs-btn-active-border-color: var(--bs-primary);
 }
 
 /* Footer */
@@ -411,7 +522,7 @@ footer hr {
   border-color: var(--mern-border-dark);
 }
 
-/* Responsive Design */
+/* Responsive Design - Improved Mobile Flip Cards */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 3rem;
@@ -424,6 +535,12 @@ footer hr {
   .flip-card {
     height: auto;
     min-height: 300px;
+    perspective: none;
+  }
+
+  .flip-card-inner {
+    transition: none;
+    transform-style: flat;
   }
 
   .flip-card:hover .flip-card-inner {
@@ -435,18 +552,22 @@ footer hr {
     transform: none;
     backface-visibility: visible;
     min-height: 300px;
+    -webkit-backface-visibility: visible;
   }
 
   .flip-card-back {
+    transform: none;
     display: none;
+    margin-top: 20px;
+    border-top: 2px solid var(--mern-blue);
   }
 
-  .flip-card:hover .flip-card-back {
+  .flip-card.flipped .flip-card-front {
+    display: none;
+  }
+  
+  .flip-card.flipped .flip-card-back {
     display: flex;
-  }
-
-  .flip-card:hover .flip-card-front {
-    display: none;
   }
 
   .mern-card, .contact-item {
