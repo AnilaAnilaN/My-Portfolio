@@ -68,27 +68,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }, index * 500);
   });
 
-  // Flip card click toggle for mobile
+  // Flip card interaction
   const flipCards = document.querySelectorAll('.flip-card');
   flipCards.forEach(card => {
-    // Click/tap handler for mobile
-    card.addEventListener('click', () => {
-      if (window.innerWidth <= 768) {
-        const inner = card.querySelector('.flip-card-inner');
-        const front = card.querySelector('.flip-card-front');
-        const back = card.querySelector('.flip-card-back');
-        const isFlipped = inner.style.transform === 'rotateY(180deg)';
-        inner.style.transform = isFlipped ? 'rotateY(0deg)' : 'rotateY(180deg)';
-        front.style.display = isFlipped ? 'flex' : 'none';
-        back.style.display = isFlipped ? 'none' : 'flex';
-      }
-    });
-
-    // Hover handlers for desktop
-    if (window.innerWidth > 768) {
+    // Only add click handler for mobile devices
+    if (window.innerWidth <= 768) {
+      card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+      });
+    } else {
+      // Desktop hover effect
       card.addEventListener('mouseenter', () => {
         card.querySelector('.flip-card-inner').style.transform = 'rotateY(180deg)';
       });
+      
       card.addEventListener('mouseleave', () => {
         card.querySelector('.flip-card-inner').style.transform = 'rotateY(0deg)';
       });
