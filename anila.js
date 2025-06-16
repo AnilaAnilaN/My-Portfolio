@@ -161,3 +161,27 @@ document.addEventListener('DOMContentLoaded', () => {
         skillObserver.observe(card);
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Soft Skills Animation
+    const softSkillCards = document.querySelectorAll('.soft-skill-card');
+    const softSkillObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, index * 150);
+                softSkillObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    softSkillCards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        softSkillObserver.observe(card);
+    });
+});
