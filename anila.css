@@ -80,7 +80,7 @@ h1, h2, h3, h4, h5, .display-1, .display-2, .display-3, .display-4, .display-5, 
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 95px;
   background: linear-gradient(135deg, rgba(71, 162, 72, 0.05) 0%, rgba(71, 162, 72, 0.02) 100%);
 }
 
@@ -573,4 +573,60 @@ footer hr {
   .mern-card, .contact-item {
     margin-bottom: 20px;
   }
+}
+
+/* Soft Skills Section Styles */
+#soft-skills {
+    background: linear-gradient(135deg, rgba(104, 160, 99, 0.05), rgba(97, 218, 251, 0.05));
+}
+
+.soft-skill-card {
+    background: var(--mern-card-light);
+    border-radius: 12px;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.soft-skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.skill-icon-container {
+    position: relative;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.skill-icon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--mern-blue), var(--mern-dark-blue));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, var(--mern-blue), var(--mern-dark-blue));
+    border-radius: 4px;
+}
+
+.dark-mode .soft-skill-card {
+    background: var(--mern-card-dark);
+    color: var(--mern-text-dark);
+}
+
+.dark-mode .soft-skill-card .card-text {
+    color: rgba(255, 255, 255, 0.7);
 }
